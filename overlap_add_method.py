@@ -79,7 +79,7 @@ def genrateSubsequence(x, m, l):
         r , s = [], []
     for i in range(0, xx/l):
         a = (x[p:q]) + [0]*(m-1)
-        p, q = q, q+q
+        p, q = q, q+l
         s.append(a)
         r = copy.copy(a)
         a = []
@@ -128,7 +128,5 @@ if __name__ == "__main__":
 	z = []
 	for i in t:
 		z = z + i
-	print "z = ", z
-
-
+	print "z ==> ", z
     print "\nThe resultant Y(N) is ==>", organise(z, n)

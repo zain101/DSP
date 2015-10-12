@@ -73,18 +73,22 @@ def genrateSubsequence(x, m, l):
         p = 0
         q = l
         r , s, xx= [], [], len(a)
+    else:
+        p = 0
+        q = l
+        r , s = [], []
     for i in range(0, xx/l):
         if (i == 0):
             a = [0]*(m-1)
             a = a + (x[p:q])
-            p, q = q, q+q
+            p, q = q, q+l
             s.append(a)
             r = copy.copy(a)
             a = []
         else:
             a = [r[-1]]
             a = a + (x[p:q])
-            p, q = q, q+q
+            p, q = q, q+l
             s.append(a)
             r = copy.copy(a)
             a = []
